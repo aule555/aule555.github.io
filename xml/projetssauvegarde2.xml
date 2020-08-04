@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<works>	
+		<item name="Orange" preview="Orange_good.png" film="news/Orange_good.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+		<item name="RBA" preview="siera.jpg" film="news/RBA_good.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+		<item name="Micra" preview="siera.jpg" film="news/micra02.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+		<item name="Oriflame" preview="oriflame.jpg" film="news/Oriflame_breakdown.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+		<item name="Primera" preview="nissan_primera.jpg" film="news/primera01.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+		<item name="Siera" preview="siera.jpg" film="news/siera duel_40.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+		<item name="Décathlon" preview="decathlon.jpg" film="news/decathlon.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+		<item name="Fiat" preview="fiat_idea.jpg" film="news/Fiat_idea21.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+		<item name="La poste" preview="la_poste.jpg" film="news/laposte1.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+		<item name="Michelin hivers" preview="siera.jpg" film="news/MICHELIN02small.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+	</works>
+	<archives>
+		<item name="Canal" preview="Canal_good.png" film="archives/Canal_good.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+		<item name="Chivas" preview="Chivas_good.png" film="archives/Chivas_good.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+		<item name="Decaux" preview="Decaux_good.png" film="archives/Decaux_good.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+		<item name="Easyworld" preview="Easyworld_good.png" film="archives/Easyworld_good.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+		<item name="Intertop" preview="Intertop_good.png" film="archives/Intertop_good.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+		<item name="Mastercard" preview="Mastercard_good.png" film="archives/Mastercard_good.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+		<item name="MinaPoe" preview="MinaPoe_good.png" film="archives/MinaPoe_good.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+		<item name="Orangina" preview="Orangina_good.png" film="archives/Orangina_good.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+		<item name="Rossignol" preview="Rossignol_good.png" film="archives/Rossignol_good.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+		<item name="Winston" preview="Winston _good.png" film="archives/Winston _good.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+		<item name="Wana" preview="Wana_good.png" film="archives/Wana_good.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+		<item name="Siera" preview="Siera-ice_good.png" film="archives/Siera-ice_good.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+		<item name="Michelin été" preview="siera.jpg" film="news/MICHELINETE.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+		<item name="Paco Rabanne" preview="paco_rabanne.jpg" film="news/Paco_Rabanne1.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+		<item name="Securité routière" preview="siera.jpg" film="news/securoutiere.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate" />
+	</archives>
+	<contact mail="christian.forget@libertysurf.fr" skype="Sfx_61" tel="+33 607013760" />
+</data>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	
+<works>	
+		
+<item name="La Marine" preview="chase.png" film="news/chasenew.flv" director="Markus Walter" production="The Gang Films (Paris)" postproduction="Digital district"/>
+
+<item name="Orange" preview="Orange_good.png" film="news/Orange_good.flv" director="Bo Platt" production="The Gang Films (Paris)" postproduction="Digital district"/>
+		
+<item name="Nina Ricci" preview="ninaricci.jpg" film="news/ninaricci.flv" director="K-roll" production="The Gang Films (Paris)" postproduction="Digital district"/>
+		
+<item name="Micra" preview="nissan_micra.jpg" film="news/micra02.flv" director="Sébastien Dhray" production="Première Heure (Paris)" postproduction="Première Heure"/>
+		
+<item name="La Marine" preview="Helico.png" film="news/hunt.flv" director="Markus Walter" production="The Gang Films (Paris)" postproduction="Digital district"/>
+		
+<item name="Primera" preview="nissan_primera.jpg" film="news/primera01.flv" director="Ruppert Sanders" production="Première Heure (Paris)" postproduction="Première Heure (Paris)"/>
+		
+<item name="Décathlon" preview="decathlon.jpg" film="news/decathlon.flv" director="Shaun Severy" production="Première Heure (Paris)" postproduction="Snarx (Paris)"/>
+		
+<item name="La poste" preview="la_poste.jpg" film="news/laposte1.flv" director="Les Rad-Ish" production="The Gang Films (Paris)" postproduction="La Maison (Paris)"/>
+	
+</works>
+	
+<archives>
+		
+<item name="Canal" preview="Canal_good.png" film="archives/Canal_good.flv" director="Baker Smith" production="Première Heure (Paris)" postproduction="Première Heure (Paris)"/>
+		
+<item name="Chivas" preview="Chivas_good.png" film="archives/Chivas_good.flv" director="Anthony Atanasio" production="Première Heure (Paris)" postproduction="Première Heure (Paris)"/>
+		
+<item name="Decaux" preview="Decaux_good.png" film="archives/Decaux_good.flv" director="Famous directors" production="Première Heure (Paris)" postproduction="Première Heure (Paris)"/>
+		
+<item name="Easyworld" preview="Easyworld_good.png" film="archives/Easyworld_good.flv" director="Henri Bargès" production="Svetoforfilms (Kiev)" postproduction="K.P.P (Kiev)"/>
+		
+<item name="Mastercard" preview="Mastercard_good.png" film="archives/Mastercard_good.flv" director="Philippe Pollet villard" production="Première Heure (Paris)" postproduction="Première Heure (Paris)"/>
+		
+<item name="Orangina" preview="Orangina_good.png" film="archives/Orangina_good.flv" director="Philippe Pollet villard" production="Première Heure (Paris)" postproduction="Première Heure (Paris)"/>
+		
+<item name="Rossignol" preview="Rossignol_good.png" film="archives/Rossignol_good.flv" director="Philippe Pollet villard" production="Première Heure (Paris)" postproduction="Première Heure (Paris)"/>
+		
+<item name="Fiat" preview="fiat_idea.jpg" film="archives/Fiat_idea21.flv" director="Enda Mc Callion" production="Première Heure (Paris)" postproduction="Première Heure (Paris)"/>
+		
+<item name="Wana" preview="Wana_good.png" film="archives/Wana_good.flv" director="Chris Nahon" production="V.D.R Prod (Casablanca)" postproduction="V.D.R Prod (Casablanca)"/>
+		
+<item name="Michelin tour" preview="Michelin tour.png" film="archives/Michelin_tour.flv" director="Michel Guimbard" production="Première Heure (Paris)" postproduction="Première Heure (Paris)"/>
+		
+<item name="Michelin vision" preview="Michelin vision.png" film="archives/Michelin_vision.flv" director="Michel Guimbard" production="Première Heure (Paris)" postproduction="Première Heure (Paris)"/>
+		
+	
+</archives>
+	
+<contact mail="christian@christian-forget.com" skype="sfx_61" tel="+33 607013760"/>
+</data>

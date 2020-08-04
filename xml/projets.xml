@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+
+	<works>	
+		<item name="Minecraft" preview="DDO.png" film="news/mnc.mov" director="Florentin" production="Candie Paris" postproduction="Machintrucchouette"/>
+		<item name="Dons D'organes" preview="DDO.png" film="news/DDO.flv" director="Greg Bray" production="Cream Paris" postproduction="Pixel Wizard Casablanca"/>
+		<item name="Ubisoft" preview="UBI.png" film="news/UBI.flv" director="Jesus de Nysu" production="Cream" postproduction="Cream Post Production"/>
+		<item name="Peugeot R8" preview="R8.png" film="news/R8.flv" director="WHO" production="Cream" postproduction="NOD Paris"/>
+		<item name="IKEA" preview="IKEA.jpg" film="news/IKEA.flv" director="Didier Barcelo" production="Henry" postproduction="Digital District"/>
+		<item name="Eristoff" preview="Eristoff.jpg" film="news/Eristoff.flv" director="Tony Truand" production="HK Corp" postproduction="Pixel-Wizard - Casablanca"/>
+		<item name="M6 Pingouin" preview="M6 pingouin.jpg" film="news/M6 pingouin.flv" director="Didier Barcelo" production="Henry" postproduction="Digital District"/>
+		<item name="Peugeot Dragon" preview="Peugeot dragon.jpg" film="news/Peugeot Dragon.flv" director="Rory Kelleher" production="Quad" postproduction="Fix Studio Paris"/>
+		<item name="Honda" preview="Honda.jpg" film="news/Honda.flv" director="Cut Up" production="Reservoir Production (Malaisia)" postproduction="Mustang Post (Malaisia)"/>
+		<item name="Nescafe" preview="nescafe.jpg" film="news/nescafe.flv" director="Didier Daubeach" production="2332 (Kiev)" postproduction="Mental Drive (Kiev)"/>
+		<item name="Thalys" preview="Thalys.jpg" film="news/Thalys.flv" director="Daniel Wolf" production="Caviar Paris" postproduction="Digital District"/>
+		<item name="Caisse D'épargne" preview="Caisse d'ep.jpg" film="news/CaisseDep.flv" director="Yohan Lemoine" production="Caviar Paris" postproduction="One More Prod"/>
+		<item name="Perle de lait" preview="Perledelait.jpg" film="news/PerleDeLait_Casting_1.flv" director="Lars Knorrn" production="Gang Films" postproduction="Digital District"/>
+		<item name="Easyworld" preview="Easyworld_good.png" film="news/Easyworld_good.flv" director="Henri Bargès" production="Svetoforfilms (Kiev)" postproduction="K.P.P (Kiev)"/>
+		<item name="La Marine" preview="chase.png" film="news/chasenew.flv" director="Markus Walter" production="The Gang Films (Paris)" postproduction="Digital district"/>
+		<item name="La Marine" preview="Helico.png" film="news/hunt.flv" director="Markus Walter" production="The Gang Films (Paris)" postproduction="Digital district"/>
+		<item name="Primera" preview="nissan_primera.jpg" film="news/primera01.flv" director="Ruppert Sanders" production="Première Heure (Paris)" postproduction="Première Heure (Paris)"/>
+		<item name="Aval Bank" preview="rba.jpg" film="news/Version_Copirate_169.flv" director="Henri Bargès" production="2332 (Kiev)" postproduction="Copirate (Paris)"/>
+	</works>
+	<archives>
+		<item name="Gulli" preview="Gulli.jpg" film="news/GULLI.flv" director="Jérémi Rozan" production="Caviar Paris" postproduction="NightSift Paris"/>
+		<item name="DIM" preview="DIM.jpg" film="news/DIM_BODYTOUCH_real.flv" director="Rachel and Fabrice Carazo" production="Gang Films" postproduction="Digital District"/>
+		<item name="Orange" preview="Orange_good.png" film="news/Orange_good.flv" director="Bo Platt" production="The Gang Films (Paris)" postproduction="Digital district"/>
+		<item name="Winamax" preview="Winamax.jpg" film="news/Winamax.flv" director="Bart Timmer" production="Henry" postproduction="Digital District"/>
+		<item name="La poste" preview="la_poste.jpg" film="news/laposte1.flv" director="Les Rad-Ish" production="The Gang Films (Paris)" postproduction="La Maison (Paris)"/>
+		<item name="Nina Ricci" preview="ninaricci.jpg" film="news/ninaricci.flv" director="K-roll" production="The Gang Films (Paris)" postproduction="Digital district"/>
+		<item name="Caisse D'épargne" preview="Caisse d'ep.jpg" film="news/CaisseDep.flv" director="Yohan Lemoine" production="Caviar Paris" postproduction="One More Prod"/>
+		<item name="Micra" preview="nissan_micra.jpg" film="news/micra02.flv" director="Sébastien Dhray" production="Première Heure (Paris)" postproduction="Première Heure"/>
+		<item name="Bic" preview="Bic.jpg" film="news/BIC.flv" director="Keith Schofield" production="Caviar Paris" postproduction="Digital District"/>
+		<item name="Décathlon" preview="decathlon.jpg" film="news/decathlon.flv" director="Shaun Severy" production="Première Heure (Paris)" postproduction="Snarx (Paris)"/>
+		<item name="Evian" preview="Evian.jpg" film="news/Evian.flv" director="Bram Van Riet" production="Caviar Content" postproduction="Digital District"/>
+		<item name="Glenmorangie" preview="Glenmo.jpg" film="news/Glenmorangie_1.flv" director="Wilfrid Buch" production="Gang Films" postproduction="Snarx"/>
+		<item name="Rexona" preview="rexona.jpg" film="news/REXONA_NITRO_REAL_1.flv" director="Rachel and Fabrice Carazo" production="Gang Films" postproduction="BUF Company"/>
+		<item name="Canal" preview="Canal_good.png" film="archives/Canal_good.flv" director="Baker Smith" production="Première Heure (Paris)" postproduction="Première Heure (Paris)"/>
+		<item name="Chivas" preview="Chivas_good.png" film="archives/Chivas_good.flv" director="Anthony Atanasio" production="Première Heure (Paris)" postproduction="Première Heure (Paris)"/>
+		<item name="Decaux" preview="Decaux_good.png" film="archives/jcdecaux.flv" director="Famous directors" production="Première Heure (Paris)" postproduction="Première Heure (Paris)"/>
+		<item name="Mastercard" preview="Mastercard_good.png" film="archives/Mastercard_good.flv" director="Philippe Pollet villard" production="Première Heure (Paris)" postproduction="Première Heure (Paris)"/>
+		<item name="Orangina" preview="Orangina_good.png" film="archives/Orangina_good.flv" director="Philippe Pollet villard" production="Première Heure (Paris)" postproduction="Première Heure (Paris)"/>
+		<item name="McDonalds" preview="mcdo.jpg" film="news/macdonalds_1.flv" director="Michel Meyer" production="Vidéorama Maroc" postproduction="VDR Casablanca"/>		
+		<item name="Rossignol" preview="Rossignol_good.png" film="archives/Rossignol_good.flv" director="Philippe Pollet villard" production="Première Heure (Paris)" postproduction="Première Heure (Paris)"/>
+		<item name="VIP Quality" preview="vip_quality.jpg" film="news/VIP_QUALITY.flv" director="" production="Umanfilms" postproduction=""/>
+		<item name="VIP Product" preview="vip_product.jpg" film="news/VIP_PRODUCT.flv" director="" production="Umanfilms" postproduction=""/>
+		<item name="VIP Customer" preview="vip_customer.jpg" film="news/VIP_COSTUMER.flv" director="" production="Umanfilms" postproduction=""/>
+		<item name="Fiat" preview="fiat_idea.jpg" film="archives/Fiat_idea21.flv" director="Enda Mc Callion" production="Première Heure (Paris)" postproduction="Première Heure (Paris)"/>
+		<item name="Wana" preview="Wana_good.png" film="archives/Wana_good.flv" director="Chris Nahon" production="V.D.R Prod (Casablanca)" postproduction="V.D.R Prod (Casablanca)"/>
+		<item name="Michelin tour" preview="Michelin tour.png" film="archives/Michelin_tour.flv" director="Michel Guimbard" production="Première Heure (Paris)" postproduction="Première Heure (Paris)"/>
+		<item name="Michelin vision" preview="Michelin vision.png" film="archives/Michelin_vision.flv" director="Michel Guimbard" production="Première Heure (Paris)" postproduction="Première Heure (Paris)"/>		
+	</archives>
+	<contact mail="christian@christian-forget.com" skype="sfx_61" tel="+33 607013760"/>
+</data>
