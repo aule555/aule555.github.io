@@ -16,7 +16,7 @@ let navSwitch = "works";
   const getXmlFile = new XMLHttpRequest();
   // Define which file to open and
   // send the request.
-  getXmlFile.open("GET", "http://127.0.0.1:5500/new-site/xml/projets.xml", false);
+  getXmlFile.open("GET", "https://github.com/aule555/aule555.github.io/tree/master/xml/projets.xml", false);
   getXmlFile.setRequestHeader("Content-Type", "text/xml");
   getXmlFile.send(null);
   // Place the response in an XML document.
@@ -135,7 +135,7 @@ function fillDisplay() {
       opacityFilter.classList.remove('hidden');
       credentials.classList.remove('hidden');
       if (navSwitch === "works") {
-        displayVideo.setAttribute('src', `http://127.0.0.1:5500/new-site/flv/${worksData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute('film')}`);
+        displayVideo.setAttribute('src', `https://github.com/aule555/aule555.github.io/tree/master/flv/${worksData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute('film')}`);
         displayVideo.autoplay = true;
         credentialsContent.forEach(element => {
           element.innerHTML = `${element.className}: ${worksData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute(element.className)}`;
@@ -145,7 +145,7 @@ function fillDisplay() {
       else if (navSwitch === "archives") {
         console.log(entry)
   
-        displayVideo.setAttribute('src', `http://127.0.0.1:5500/new-site/flv/${archivesData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute('film')}`);
+        displayVideo.setAttribute('src', `https://github.com/aule555/aule555.github.io/tree/master/flv/${archivesData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute('film')}`);
         credentialsContent.forEach(element => {
           element.innerHTML = `${element.className}: ${archivesData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute(element.className)}`;
         });
@@ -157,11 +157,11 @@ function fillDisplay() {
     entry.addEventListener('mouseover', function () {
       if (navSwitch === "works") {
         displayImage.classList.remove('hidden');
-        displayImage.setAttribute('src', `http://127.0.0.1:5500/new-site/images/${worksData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute('preview')}`);
+        displayImage.setAttribute('src', `https://github.com/aule555/aule555.github.io/tree/master/images/${worksData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute('preview')}`);
       }
       else if (navSwitch === "archives") {
         displayImage.classList.remove('hidden');
-        displayImage.setAttribute('src', `http://127.0.0.1:5500/new-site/images/${archivesData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute('preview')}`);
+        displayImage.setAttribute('src', `https://github.com/aule555/aule555.github.io/tree/master/new-site/images/${archivesData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute('preview')}`);
       }
     });
     entry.addEventListener('mouseout', function () {
