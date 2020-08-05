@@ -1,6 +1,8 @@
 body {
-    background-image: url('img/christian_fond_v01.svg');
+    background-image: url("/img/christian_fond_v01.svg");
     background-color: #4E4E4F;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header {
