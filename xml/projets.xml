@@ -2,7 +2,7 @@
 <data>
 
 	<works>	
-		<item name="Minecraft" preview="DDO.png" film="mnc.mov" director="Florentin" production="Candie Paris" postproduction="Machintrucchouette"/>
+		<item name="Minecraft" preview="DDO.png" film="mnc.mp4" director="Florentin" production="Candie Paris" postproduction="Machintrucchouette"/>
 		<item name="Dons D'organes" preview="DDO.png" film="news/DDO.flv" director="Greg Bray" production="Cream Paris" postproduction="Pixel Wizard Casablanca"/>
 		<item name="Ubisoft" preview="UBI.png" film="news/UBI.flv" director="Jesus de Nysu" production="Cream" postproduction="Cream Post Production"/>
 		<item name="Peugeot R8" preview="R8.png" film="news/R8.flv" director="WHO" production="Cream" postproduction="NOD Paris"/>
