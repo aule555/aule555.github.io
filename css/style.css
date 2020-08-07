@@ -1,8 +1,8 @@
 body {
-    background-image: url("/img/christian_fond_v01.svg");
-    background-color: #4E4E4F;
+    background-image: url("/aule555.github.io/img/christian_fond_v01.svg");
+    background-color: #3E3E3E;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
@@ -12,7 +12,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-content: center;
-    height: 88px;
+    height: 70px;
     padding: 0 75px 0 50px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -23,8 +23,14 @@ header {
 }
 
 h1{
+    font-size: 24px;
     width: 582px;
     margin-right: 50px;
+    padding-top: 3px;
+}
+
+h1 span {
+    margin: 0 6px;
 }
 
 nav {
@@ -36,9 +42,10 @@ nav {
 }
 
 .nav-entry {
-    border: solid white 2.5px;
+    border: solid white 2px;
     margin: auto 0;
-    padding: 5px 10px;
+    padding: 2.5px 5px;
+    font-size: 13px;
 }
 
 .nav-entry:hover{
@@ -52,7 +59,7 @@ nav {
 main {
     display: flex;
     justify-content: space-between;
-    height: calc(100vh - 88px);
+    height: calc(100vh - 70px);
     padding: 0 75px 0 50px;    
     z-index: 0;
 }
@@ -60,13 +67,13 @@ main {
 .opacity-filter {
     position: absolute;
     background-color: black;
-    opacity: 0.50;
+    opacity: 0;
     z-index: 3;
     width: 100%;
-    height: calc(100% - 88px);
-    top: 88px;
+    height: calc(100% - 70px);
+    top: 70px;
     left: 0;
-    transition: opacity 2s;
+    transition: opacity 0.5s;
 }
 
 .display {
@@ -78,7 +85,6 @@ main {
     width: 100%;
     margin-right: 50px;
     padding: 135px 0;
-    transition: opacity 4s ;
 }
 
 .display img {
@@ -91,20 +97,22 @@ main {
     width: 100%;
     height: 100%;
     object-fit: contain ;
-    z-index: 4;
+    z-index: 6;
     opacity: 1;
-    transition: opacity 2s;
+    transition: opacity 0.5s;
 }
 
 .credits {
     display: block;
     position: absolute;
     bottom: 0;
-    height: 135px;
+    height: 112px;
     width: 70%;
     z-index: 4;
     text-align: center;
     color: white;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 .credits p {
@@ -115,9 +123,12 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-width: 240px;
+    min-width: 192px;
     width: 240px;
     height: inherit;
+    font-size: 12px;
+    opacity: 1;
+    transition: opacity 0.5s;
 }
 
 .slider-entries {
@@ -132,13 +143,12 @@ main {
 }
 
 .slider-entry {
-    border: solid white 2.6px;
+    border: solid white 2px;
     color: white;
-    font-size: 1.6em;
+    font-size: 1.4em;
     text-align: center;
-    height: 36px;
     margin: 10px 0;
-    padding: 5px 10px;
+    padding: 6px 2px;
 }
 .slider-entry:hover{
     cursor: pointer;
@@ -146,11 +156,6 @@ main {
 }
 .slider-entry:active{
     background-color: lightgray;
-}
-
-.hidden {
-    display: none;
-    opacity: 0;
 }
 
 .uplist, .downlist {
@@ -179,10 +184,12 @@ span.unactive {
     top: 30%;
     left: 50%;
     z-index: 4;
-    font-size: 50px;
+    font-size: 40px;
     color: white;
     transform: translateY(-50%);
     transform: translateX(-50%);
+    opacity: 1;
+    transition: opacity 0.5s;
 }
 
 .contact p {
@@ -200,4 +207,19 @@ span.unactive {
               user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome, Edge, Opera and Firefox */
   }
+
+.hidden {
+    display: none;
+}
+.fade {
+    opacity: 1;
+}
+
+.fadeout {
+    opacity: 0;
+}
+
+.fadeFilter {
+    opacity: 0.50;
+}
 

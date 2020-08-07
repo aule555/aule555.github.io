@@ -62,17 +62,47 @@ let navSwitch = "works";
 
   // -- nav behavior --
 
-  opacityFilter.addEventListener('click', function() {
+  function fadeDisplay() {
     if (!opacityFilter.classList.contains('hidden')) {
-      if (!credentials.classList.contains('hidden')) {
-        opacityFilter.classList.add('hidden');
+      if (navSwitch === "contact") {
         displayVideo.pause();
         displayVideo.currentTime = 0;
-        credentials.classList.add('hidden');
+        credentials.classList.remove('fade');
+        // displayVideo.classList.remove('fade');
         displayVideo.classList.add('hidden');
+
+        setTimeout(() => {
+          credentials.classList.add('hidden');
+        }, 10);
+
+      } else if (!credentials.classList.contains('hidden')) {
+        displayVideo.pause();
+        displayVideo.currentTime = 0;
+        opacityFilter.classList.remove('fadeFilter');
+        credentials.classList.remove('fade');
+        // displayVideo.classList.remove('fade');
+        displayVideo.classList.add('hidden');
+
+        setTimeout(() => {
+         opacityFilter.classList.add('hidden');
+        credentials.classList.add('hidden');
+
+        }, 500);
       }
     }
+  }
+
+  opacityFilter.addEventListener('click', function() {
+    fadeDisplay();
   });
+  credentials.addEventListener('click', function() {
+    fadeDisplay();
+  });
+  const header = document.querySelector('header');
+  header.addEventListener('click', function() {
+    fadeDisplay();
+  });
+
 
   fillSlider(worksData);
   fillDisplay();
@@ -81,9 +111,14 @@ let navSwitch = "works";
       nav[n].addEventListener("click", function() {
         if (navSwitch !== "works") {
           if (navSwitch === "contact") {
-            opacityFilter.classList.add('hidden');
-            contactPage.classList.add('hidden');
+            opacityFilter.classList.remove('fadeFilter');
+            contactPage.classList.remove('fade');
             slider.parentElement.classList.remove('hidden');
+            setTimeout(() => {
+              opacityFilter.classList.add('hidden');
+              contactPage.classList.add('hidden');
+              slider.parentElement.classList.remove('fadeout');
+            }, 10);
           }
           navSwitch = "works";
           clearSlider();
@@ -96,9 +131,14 @@ let navSwitch = "works";
       nav[n].addEventListener("click", function() {
         if (navSwitch !== "archives") {
           if (navSwitch === "contact") {
-            opacityFilter.classList.add('hidden');
-            contactPage.classList.add('hidden');
+            opacityFilter.classList.remove('fadeFilter');
+            contactPage.classList.remove('fade');
             slider.parentElement.classList.remove('hidden');
+            setTimeout(() => {
+              opacityFilter.classList.add('hidden');
+              contactPage.classList.add('hidden');
+              slider.parentElement.classList.remove('fadeout');
+            }, 10);
           }
           navSwitch = "archives";
           clearSlider();
@@ -114,7 +154,12 @@ let navSwitch = "works";
             navSwitch = "contact"
             opacityFilter.classList.remove('hidden');
             contactPage.classList.remove('hidden');
-            slider.parentElement.classList.add('hidden');
+            slider.parentElement.classList.add('fadeout');
+            setTimeout(() => {
+              opacityFilter.classList.add('fadeFilter');
+              contactPage.classList.remove('fade');
+              slider.parentElement.classList.add('hidden');
+            }, 10);
     console.log(navSwitch)
   };
       });
@@ -131,16 +176,22 @@ function fillDisplay() {
     //video launcher
     entry.addEventListener('click', function () {
       displayImage.classList.add('hidden');
-      displayVideo.classList.remove('hidden');
       opacityFilter.classList.remove('hidden');
       credentials.classList.remove('hidden');
+      setTimeout(() => {
+        opacityFilter.classList.add('fadeFilter');
+        // displayVideo.classList.add('fade');
+        credentials.classList.add('fade');
+        displayVideo.classList.remove('hidden');
+      }, 10);
+
+
       if (navSwitch === "works") {
         displayVideo.setAttribute('src', `flv/${worksData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute('film')}`);
         displayVideo.autoplay = true;
         credentialsContent.forEach(element => {
-          element.innerHTML = `${element.className}: ${worksData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute(element.className)}`;
+          element.innerHTML =`${element.className}: ${worksData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute(element.className)}`;
         });
-        displayVideo.load(); 
       }
       else if (navSwitch === "archives") {
         console.log(entry)
@@ -149,10 +200,11 @@ function fillDisplay() {
         credentialsContent.forEach(element => {
           element.innerHTML = `${element.className}: ${archivesData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute(element.className)}`;
         });
-        displayVideo.autoplay = true;
-        displayVideo.load(); 
       }
+      displayVideo.autoplay = true;
+      displayVideo.load(); 
     });
+
     //image preview
     entry.addEventListener('mouseover', function () {
       if (navSwitch === "works") {
@@ -190,7 +242,7 @@ upButton.addEventListener('click', function () {
       upButton.classList.add('unactive');
     else
       downButton.classList.remove('unactive');
-  }    
+  }
 });
 downButton.addEventListener('click', function () {
   const sliderEntries = slider.querySelectorAll('.slider-entry');
