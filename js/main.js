@@ -23,6 +23,7 @@ let navSwitch = "works";
   const xmlDoc = getXmlFile.responseXML;
   const worksData = xmlDoc.querySelector('works');
   const archivesData = xmlDoc.querySelector('archives');
+  const othersData = xmlDoc.querySelector('others');
   console.log(worksData, archivesData)
 
 
@@ -48,6 +49,10 @@ let navSwitch = "works";
       }
       prevEntry = entry;
     }
+    if (items.length < 10)
+      downButton.classList.add("unactive");
+    else if (downButton.classList.contains("unactive"))
+      downButton.classList.remove("unactive");
   }
 
   // the function name is enough clear..
@@ -159,6 +164,32 @@ let navSwitch = "works";
   };
       });
     }
+     else if (n === 2) {
+      nav[n].addEventListener("click", function() {
+      if (navSwitch !== "others") {
+        if (navSwitch === "contact") {
+          opacityFilter.classList.remove('fadeFilter');
+          contactPage.classList.remove('fade');
+          slider.parentElement.classList.remove('hidden');
+          setTimeout(() => {
+            opacityFilter.classList.add('hidden');
+            contactPage.classList.add('hidden');
+            slider.parentElement.classList.remove('fadeout');
+          }, 10);
+        }
+        navSwitch = "others";
+        slider.classList.add('moveRight');
+          setTimeout(() => {
+            clearSlider();
+            fillSlider(othersData);
+            fillDisplay();
+          }, 500);     
+          setTimeout(() => {
+            slider.classList.remove('moveRight');
+          }, 500);
+};
+    });
+  }
       else if (n === 3){
         nav[n].addEventListener("click", function() {
           if (navSwitch !== "contact") {
@@ -212,6 +243,14 @@ function fillDisplay() {
           element.innerHTML = `${element.className}: ${archivesData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute(element.className)}`;
         });
       }
+      else if (navSwitch === "others") {
+        console.log(entry)
+  
+        displayVideo.setAttribute('src', `flv/${othersData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute('film')}`);
+        credentialsContent.forEach(element => {
+          element.innerHTML = `${element.className}: ${othersData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute(element.className)}`;
+        });
+      }
       displayVideo.autoplay = true;
       displayVideo.load(); 
     });
@@ -225,6 +264,10 @@ function fillDisplay() {
       else if (navSwitch === "archives") {
         displayImage.classList.remove('hidden');
         displayImage.setAttribute('src', `images/${archivesData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute('preview')}`);
+      } 
+      else if (navSwitch === "others") {
+        displayImage.classList.remove('hidden');
+        displayImage.setAttribute('src', `images/${othersData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute('preview')}`);
       }
     });
     entry.addEventListener('mouseout', function () {
@@ -235,7 +278,6 @@ function fillDisplay() {
 }
 
 // -- Slider - up and down button behavior --
-
 upButton.addEventListener('click', function () {
   const sliderEntries = slider.querySelectorAll('.slider-entry');
   if (sliderEntries[0].classList.contains('hidden')) {
