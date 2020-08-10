@@ -59,6 +59,7 @@ nav {
 main {
     display: flex;
     justify-content: space-between;
+    min-height: 590px;
     height: calc(100vh - 70px);
     padding: 0 75px 0 50px;    
     z-index: 0;
@@ -78,7 +79,6 @@ main {
 
 .display {
     display: flex;
-    /* flex-direction: column; */
     justify-content: space-around;
     align-content: center;
     min-width: 582px;
@@ -125,6 +125,7 @@ main {
     justify-content: space-between;
     min-width: 192px;
     width: 240px;
+    min-height: 590px;
     height: inherit;
     font-size: 12px;
     opacity: 1;
@@ -222,4 +223,9 @@ span.unactive {
 .fadeFilter {
     opacity: 0.50;
 }
+
+upSlide {}
+downSlide {}
+moveRight {}
+
 

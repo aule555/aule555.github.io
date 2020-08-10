@@ -39,8 +39,8 @@ let navSwitch = "works";
       entry.appendChild(entryContent);
       entry.classList.add('slider-entry');
       if ((items.length - 1) - n > 8) {
-        entry.classList.add('hidden');
         slider.insertBefore(entry, prevEntry);
+        entry.classList.add('hidden');
       } else if (n > 0) {
         slider.insertBefore(entry, prevEntry);
       } else {
@@ -58,7 +58,6 @@ let navSwitch = "works";
       entry.parentNode.removeChild(entry);
     }
   }
-
 
   // -- nav behavior --
 
