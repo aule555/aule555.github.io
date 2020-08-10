@@ -6,7 +6,7 @@ const displayImage = document.querySelector('img');
 const displayVideo = document.querySelector('video');
 const opacityFilter = document.querySelector('.opacity-filter');
 const credentials = document.querySelector('.credits');
-const contactPage = document.querySelector('.contact')
+const contactPage = document.querySelector('.contact');
 let navSwitch = "works";
 
 
@@ -120,9 +120,15 @@ let navSwitch = "works";
             }, 10);
           }
           navSwitch = "works";
-          clearSlider();
-          fillSlider(worksData);
-          fillDisplay();
+          slider.classList.add('moveRight');
+            setTimeout(() => {
+              clearSlider();
+              fillSlider(worksData);
+              fillDisplay();
+            }, 500);     
+            setTimeout(() => {
+              slider.classList.remove('moveRight');
+            }, 500);           
     console.log(navSwitch)
   };
       });
@@ -140,14 +146,20 @@ let navSwitch = "works";
             }, 10);
           }
           navSwitch = "archives";
-          clearSlider();
-          fillSlider(archivesData);
-          fillDisplay();
+          slider.classList.add('moveRight');
+            setTimeout(() => {
+              clearSlider();
+              fillSlider(archivesData);
+              fillDisplay();
+            }, 500);     
+            setTimeout(() => {
+              slider.classList.remove('moveRight');
+            }, 500);       
     console.log(navSwitch)
   };
       });
     }
-      else if (n === 2){
+      else if (n === 3){
         nav[n].addEventListener("click", function() {
           if (navSwitch !== "contact") {
             navSwitch = "contact"
@@ -235,8 +247,21 @@ upButton.addEventListener('click', function () {
         prevEntry = n;
       }
     }
-    sliderEntries[prevEntry].classList.remove('hidden');
-    sliderEntries[prevEntry + 9].classList.add('hidden');
+    // sliderEntries[prevEntry].classList.remove('hidden');
+    // sliderEntries[prevEntry + 9].classList.add('hidden');
+
+
+    sliderEntries[prevEntry + 9].classList.add('upSlide');
+    setTimeout(() => {
+      sliderEntries[prevEntry + 9].classList.add('hidden');
+      sliderEntries[prevEntry].classList.remove('hidden');
+      sliderEntries[prevEntry].classList.add('downSlide');
+    }, 200);
+
+    setTimeout(() => {
+      sliderEntries[prevEntry + 9].classList.remove('upSlide');
+      sliderEntries[prevEntry].classList.remove('downSlide');
+    }, 300);
     if (prevEntry + 9 === 9)
       upButton.classList.add('unactive');
     else
@@ -254,8 +279,20 @@ downButton.addEventListener('click', function () {
       }
     }
     console.log(prevEntry)
-    sliderEntries[prevEntry].classList.add('hidden');
-    sliderEntries[prevEntry + 9].classList.remove('hidden');
+    sliderEntries[prevEntry].classList.add('downSlide');
+    setTimeout(() => {
+      sliderEntries[prevEntry].classList.add('hidden');
+      sliderEntries[prevEntry + 9].classList.remove('hidden');
+      sliderEntries[prevEntry + 9].classList.add('upSlide');
+      sliderEntries[prevEntry + 9].preventDefault;
+    }, 200);
+
+    setTimeout(() => {
+      sliderEntries[prevEntry].classList.remove('downSlide');
+      sliderEntries[prevEntry + 9].classList.remove('upSlide');
+      sliderEntries[prevEntry].preventDefault;
+    }, 300);
+    
     if (prevEntry + 9 === sliderEntries.length - 1)
       downButton.classList.add('unactive');
     else

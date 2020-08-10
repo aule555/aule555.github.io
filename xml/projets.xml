@@ -50,5 +50,6 @@
 		<item name="MICHELIN TOUR" preview="Michelin tour.png" film="archives/Michelin_tour.flv" director="Michel Guimbard" production="Première Heure (Paris)" postproduction="Première Heure (Paris)"/>
 		<item name="MICHELIN TOUR" preview="Michelin vision.png" film="archives/Michelin_vision.flv" director="Michel Guimbard" production="Première Heure (Paris)" postproduction="Première Heure (Paris)"/>		
 	</archives>
+	<others></others>
 	<contact mail="christian@christian-forget.com" skype="sfx_61" tel="+33 607013760"/>
 </data>
