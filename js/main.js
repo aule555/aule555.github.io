@@ -6,26 +6,33 @@ const wrapper = document.querySelector('.wrapper');
 const wrapperMenu = document.querySelector('.wrapper-menu');
 const logo = document.querySelector('.logo');
 const hr = document.querySelectorAll('.hr-menu')
-
+const entries = document.querySelectorAll('.entry')
+const entriesContent = document.querySelectorAll('.entry-content')
+let lastEntry = entries[0];
+let cache = 0;
 
 window.onload = () => {
     if (window.innerWidth < 1024)
     for (let n = 0; n < entries.length; n++) {
         if (n > 0)
             entries[n].classList.add('hidden');
-    }
+    } else
+        cache = 1;
 }
 window.addEventListener('resize', function(event){
     let newWidth = window.innerWidth;
     let newHeight = window.innerHeight; 
-
-    if (newWidth > 1024) {
+    if (newWidth > 1024 && cache === 0) {
+        cache = 1
         for (let n = 0; n < entries.length; n++) {
             if (entries[n].classList.contains('hidden'))
             entries[n].classList.remove('hidden');
+            if (wrapperMenu.classList.contains('open')) {
+                hr[n].classList.add('hidden');
+            }
         }
-    } else if (newWidth < 1024) {
-        
+    } else if (newWidth < 1024 && cache === 1) {
+        cache = 0;
         if (wrapperMenu.classList.contains('open'))
             wrapperMenu.classList.remove('open')
         for (let n = 0; n < entries.length; n++) {
@@ -36,6 +43,7 @@ window.addEventListener('resize', function(event){
                 entries[n].classList.add('hidden');
         }
     }
+    console.log(cache)
 });
 
 wrapper.addEventListener('click', () => {
@@ -47,15 +55,17 @@ wrapper.addEventListener('click', () => {
 });
 
 
-const entries = document.querySelectorAll('.entry')
-const entriesContent = document.querySelectorAll('.entry-content')
+
 //  putting 'click' listener on all entries in the nav
 for (let n = 0; n < entries.length; n++) {  
     const entry = entries[n];
     const entryContent = entriesContent[n];
 
     entry.addEventListener("click", function(e) {
-
+        console.log(lastEntry.innerHTML)
+        lastEntry.classList.remove('selected');
+        e.target.classList.add('selected');
+        lastEntry = e.target;
         for (let n2 = 0; n2 < entriesContent.length; n2++) {
             //  checking if an entry content is already opened
             if (entryContent != entriesContent[n2] && !entriesContent[n2].classList.contains('hidden')) {
@@ -67,7 +77,6 @@ for (let n = 0; n < entries.length; n++) {
         // for responsive menu
         if (wrapperMenu.classList.contains('open') && e.target.innerHTML === entry.innerHTML) {
             wrapMenu(entries, e.target);
-            
         }
     });
 
@@ -77,7 +86,6 @@ wrapperMenu.addEventListener('click', () => {
     wrapMenu(entries);
 });
 
-let lastEntry = entries[0];
 function wrapMenu(entries, entryTarget) {
     entryTarget = (typeof entryTarget === 'undefined') ? '' : entryTarget;
     if (entryTarget !== '')
