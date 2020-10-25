@@ -1,9 +1,10 @@
 {
-  "name": "christian_forget_site",
+  "name": " ",
   "version": "0.0.1",
-  "keywords": [],
-  "license": "ISC",
-  "author": "Florentin Servot",
+  "description": "",
+  "keywords": "",
+  "license": "",
+  "author": "",
   "scripts": {
     "build": "parcel build index.html",
     "dev": "parcel index.html --open",
@@ -12,13 +13,5 @@
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
-  },
-  "main": "index.js",
-  "directories": {
-    "doc": "doc"
-  },
-  "description": "",
-  "dependencies": {
-    "nodaemon": "0.0.5"
   }
 }

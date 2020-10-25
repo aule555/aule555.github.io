@@ -3,86 +3,196 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Armurerie du Colombier</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
+  <meta property="og:title" content="Armurerie du Colombier">
+  <meta property="og:type" content="website">
   <meta property="og:url" content="">
-  <meta property="og:image" content="">
+  <meta property="og:image" content="img/logo-armurerie.svg">
 
   <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
 
-  <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style_mobile.css">
+
+
+
 
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
 
+  <!-- Add your site or application content here -->
+
   <header>
-    <h1>CHRISTIAN<span class="grey">FORGET</span>POST<span class="grey">PRODUCER</span></h1>
-
-    <nav class="noselect">
-      <span class="nav-entry">WORKS</span>
-      <span class="nav-entry">ARCHIVES</span>
-      <span class="nav-entry">OTHERS</span>
-      <span class="nav-entry">CONTACT</span>
-    </nav>
+    <img class="logo" src="img/logo-header.svg" alt="Armurerie du Colombier">
+    <!-- <h1>ARMURERIE DU COLOMBIER</h1>
+    <h2>Vente et réparation</h2> -->
+    <div class="front-desk">
+      <p>« Un passionné d'armes et de fines mécaniques au service des chasseurs, tireurs sportifs et collectionnneurs. »</p>
+      <img class="wrapper" src="img/wrapper.svg" alt="">
+    </div>
+    <div class="header-menu hidden">
+      <hr />
+      <nav>
+        <span class="entry">Présentation</span>
+        <hr class="hr-menu hidden" />
+        <span class="entry ">Services - Réalisations</span>
+        <hr class="hr-menu hidden" />
+        <span class="entry ">Magasin</span>
+        <hr class="hr-menu hidden" />
+        <span class="entry ">Informations Pratiques</span>
+        <hr class="hr-menu hidden" />
+        <img class="wrapper-menu" src="img/wrapper.svg" alt="">
+      </nav>
+    </div>
   </header>
-
-  <main>
-    <div class="opacity-filter hidden"></div>
-    <div class="display">
-      <img src="" alt="" class="hidden">
-      <video controls class="video-js hidden" preload="auto">
-        <source src="" type="video/mp4">
-        <span class="vjs-no-js">
-          To view this video please enable JavaScript, and consider upgrading to a
-          web browser that
-          <a href="https://videojs.com/html5-video-support/" target="_blank"
-            >supports HTML5 video</a
-          >
-        </span>
-      </video>
-      <div class="credits hidden">
-        <p class="director"></p>
-        <p class="production"></p>
-        <p class="postproduction"></p>
-      </div>
+  <main  class="hidden">
+    <div class="entry-content presentation">
+      <h3>La naissance d’une passion</h3>
+      <p> 
+        Ayant grandi dans une famille de chasseurs, c’est tout d’abord cette passion qui m’a permis d’apprivoiser les armes de chasse.
+         J’ai toujours été fasciné par la qualité des matières premières et la minutie de son exécution. 
+         Dès l’enfance je me suis exercé au tir sportif devenant à l’âge 13 ans tireur à la poudre noire, puis pistolier. <br>
+        <br>
+        L’artisanat d’arme est pour moi plus qu’un métier, c’est une vocation, un art de vivre. 
+        Le travail du bois et du métal sont pour moi une source de créativité et d’esthétisme qui s’apprivoise avec patience. <br>
+        <br>
+        C’est pour cette raison que j’ai intégré l’École d’Armurerie de Liège en section métal dont je suis sorti diplômé en 2014, 
+        avant de me former à la fabrication de crosses et de finition du bois. Durant ces années, j’ai enrichi mon expérience 
+        lors de divers stages, dont un au Musée Art & Histoire de Bruxelles durant lequel j’ai pu effectuer la restauration 
+        d’un fusil chassepot à cartouches en papiers. <br>
+        <br>
+        J’ai par la suite perfectionné mon expertise dans la vente et la réparation d’armes deux ans en Belgique puis deux ans à Lille. <br>
+        <br>
+        C’est aujourd’hui avec plaisir que j’ouvre les portes de mon premier magasin et atelier afin de vous servir et transmettre ma passion. <br> 
+        </p>
     </div>
-    <div class="slider noselect">
-      <div class="uplist"><span class="unactive">&#9650</span></div>
-      <div class="slider-entries">
-        <!-- filled with Js code at main.js -->
+    <div class="entry-content prestations hidden">
+      <div class="prestations-div atelier-div">
+        <div class="main-text">
+          <h3>Prestations proposées en atelier</h3>
+          <ul>
+            <li>Nettoyage, entretient</li>
+            <li>Réparations générales, fabrications de pièces</li>
+            <li>Fabrication des ressorts à lame et à boudin</li>
+            <li>Rebascliage des canons sur basclie</li>
+            <li>Reprise des jeux, longuesse</li>
+            <li>Vente entre particliiers</li>
+            <li>Dépôt-vente</li>
+            <li>Déclaration d’armes</li>
+            <li>Passage au banc d’épreuves et démilitarisation, mise en destructions</li>
+          </ul>
+        </div>
+        <!-- <div class="main-images"> -->
+          <img src="img/atelier1.jpg" alt="">
+        <!-- </div> -->
+      </div>
+      <div class="prestations-div bois-div">
+        <div class="main-text">
+          <h3>En bois</h3>
+          <ul>
+            <li>Fabrications, réparations des crosses 
+              du devant</li>
+            <li>Finition poncé huilé, vernis</li>
+            <li>Pose de plaques de couches caoutchouc, et fabrication de plaques en bois</li>
+            <li>Incrustations de plaques de couches 
+              squelettiques</li>
+            <li>Pose de calottes de poignées gravé</li>
+            </ul>
+        </div>
+        <!-- <div class="main-images"> -->
+          <img src="img/atelier2.jpg" alt="">  
+        <!-- </div> -->
+      </div>
+      <div class="prestations-div cannonerie-div">
+        <div class="main-text">
+          <h3>En canonnerie</h3>
+          <ul>
+            <li>Montage d’optiques, montage crochet, pivot...</li>
+            <li>Reprises des coups, bosses sur les canons ou bandes de visée</li>
+            <li>Soudures des bandes</li>
+            <li>Polissage des chambres</li>
+            <li>Fabrications reprises des jeux et réglages extracteurs et éjecteurs</li>
+            <li>Déchoquage des canons</li>
+            <li>Bronzage à la couche</li>
+            <li>Filetage pour montage des modérateurs de son</li>
+          </ul>
+        </div>
+        <!-- <div class="main-images"> -->
+          <img src="img/atelier3.jpg" alt="">
+        <!-- </div> -->
+      </div>
+    
+    </div>
+    <div class="entry-content magasin hidden">
+        <div class="magasin-div top-side">
+            <p>Vous trouverez en magasin des offres diverses d’armes choisi avec 
+              soin. Mais aussi des accessoires tels que des optiques, des kits de 
+              nettoyages, des cartouches, des housses de fusils et armes de poing.
+              Ainsi qu’un assortiment de couteaux et de dagues. 
+              Des matériels de découpes sont également disponibles sur place : 
+              couteaux à désosser, scies, lames de scie de rechange et gants 
+              anti-coupes. Et également des articles d’auto-d’effense : gazeuses, 
+              matraques, shockers, pistolets Gomm-Cogne. 
+              Tous les produits vendus sur place sont suivis. </p>
+          <img id="img1" src="img/magasin4.jpg" alt="">
+        </div>
+        <div class="magasin-div bot-side">        
+          <img id="img2" src="img/magasin1.jpg" alt="">
+          <img id="img3" src="img/magasin2.jpg" alt="">
+          <img id="img4" src="img/magasin3.jpg" alt="">
+        </div>
       </div>
 
-      <div class="downlist"><span>&#9660</span></div>
     </div>
-    <div class="contact hidden">
-      <p>Email: christian@christian-forget.com</p>
-      <p>skype: sfx_61</p>
-      <p>cell: +33 607013760</p>
+
+    <div class="entry-content informations hidden">
+      <div class="informations-div">
+        <h1>Adresse -</h1>
+        <p>Ferme du Colombier, hameau de Fortail <br>
+          Route National 4 <br>
+          77320 Beton-Bazoches <br>
+        </p>
+        <img class="map" src="img/map.png" alt="">
+      </div>
+      <div class="informations-div">
+        <h1>Horaires -</h1>
+        <p>
+          Mardi, jeudi, vendredi, samedi <br>
+          9h00 - 12h30 <br>
+          13h30 - 19h00 <br>
+          ou sur rendez-vous
+        </p>
+      </div>
+      <div class="informations-div">
+        <h1>Contact -</h1>
+        <p>    
+          Armand Abit <br> <br>
+          06 98 10 81 49 <br> <br>
+          armurerieducolombier@gmail.com
+        </p>
+      </div>
     </div>
   </main>
 
-  <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID.
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
   </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script> 
-</head>
--->
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
 </body>
 
 </html>

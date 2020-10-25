@@ -1,343 +1,101 @@
-const nav = document.querySelectorAll('.nav-entry');
-const slider = document.querySelector('.slider-entries');
-const upButton = document.querySelector('.uplist').firstChild;
-const downButton = document.querySelector('.downlist').firstChild;
-const displayImage = document.querySelector('img');
-const displayVideo = document.querySelector('video');
-const opacityFilter = document.querySelector('.opacity-filter');
-const credentials = document.querySelector('.credits');
-const contactPage = document.querySelector('.contact');
-let navSwitch = "works";
+const header = document.querySelector('header');
+const main = document.querySelector('main');
+const frontDesk = document.querySelector('.front-desk');
+const headerMenu = document.querySelector('.header-menu');
+const wrapper = document.querySelector('.wrapper');
+const wrapperMenu = document.querySelector('.wrapper-menu');
+const logo = document.querySelector('.logo');
+const hr = document.querySelectorAll('.hr-menu')
 
 
-// -- xml file loader --
-
-  // Create a connection to the file.
-  const getXmlFile = new XMLHttpRequest();
-  // Define which file to open and
-  // send the request.
-  getXmlFile.open("GET", "xml/projets.xml", false);
-  getXmlFile.setRequestHeader("Content-Type", "text/xml");
-  getXmlFile.send(null);
-  // Place the response in an XML document.
-  const xmlDoc = getXmlFile.responseXML;
-  const worksData = xmlDoc.querySelector('works');
-  const archivesData = xmlDoc.querySelector('archives');
-  const othersData = xmlDoc.querySelector('others');
-  console.log(worksData, archivesData)
-
-
-// -- nav behavior and slider fill --
-
-  // reading passed data corresponding to xml structure file
-  function fillSlider (xmlData) {
-    let prevEntry;
-    items = xmlData.querySelectorAll('item');
-    for (let n = 0; n < items.length; n++) {
-      const item = items[(items.length - 1) - n];
-      const entry = document.createElement("div");
-      const entryContent = document.createTextNode(item.getAttribute('name'));
-      entry.appendChild(entryContent);
-      entry.classList.add('slider-entry');
-      if ((items.length - 1) - n > 8) {
-        slider.insertBefore(entry, prevEntry);
-        entry.classList.add('hidden');
-      } else if (n > 0) {
-        slider.insertBefore(entry, prevEntry);
-      } else {
-        slider.insertBefore(entry, null);
-      }
-      prevEntry = entry;
+window.onload = () => {
+    if (window.innerWidth < 1024)
+    for (let n = 0; n < entries.length; n++) {
+        if (n > 0)
+            entries[n].classList.add('hidden');
     }
-    if (items.length < 10)
-      downButton.classList.add("unactive");
-    else if (downButton.classList.contains("unactive"))
-      downButton.classList.remove("unactive");
-  }
+}
+window.addEventListener('resize', function(event){
+    let newWidth = window.innerWidth;
+    let newHeight = window.innerHeight; 
 
-  // the function name is enough clear..
-  function clearSlider() {
-    const sliderEntries = slider.querySelectorAll('.slider-entry');
-    for (let n = 0; n < sliderEntries.length; n++) {
-      const entry = sliderEntries[n];
-      entry.parentNode.removeChild(entry);
-    }
-  }
-
-  // -- nav behavior --
-
-  function fadeDisplay() {
-    if (!opacityFilter.classList.contains('hidden')) {
-      if (navSwitch === "contact") {
-        displayVideo.pause();
-        displayVideo.currentTime = 0;
-        credentials.classList.remove('fade');
-        // displayVideo.classList.remove('fade');
-        displayVideo.classList.add('hidden');
-
-        setTimeout(() => {
-          credentials.classList.add('hidden');
-        }, 10);
-
-      } else if (!credentials.classList.contains('hidden')) {
-        displayVideo.pause();
-        displayVideo.currentTime = 0;
-        opacityFilter.classList.remove('fadeFilter');
-        credentials.classList.remove('fade');
-        // displayVideo.classList.remove('fade');
-        displayVideo.classList.add('hidden');
-
-        setTimeout(() => {
-         opacityFilter.classList.add('hidden');
-        credentials.classList.add('hidden');
-
-        }, 500);
-      }
-    }
-  }
-
-  opacityFilter.addEventListener('click', function() {
-    fadeDisplay();
-  });
-  credentials.addEventListener('click', function() {
-    fadeDisplay();
-  });
-  const header = document.querySelector('header');
-  header.addEventListener('click', function() {
-    fadeDisplay();
-  });
-
-
-  fillSlider(worksData);
-  fillDisplay();
-  for (let n = 0; n < nav.length; n++) {
-    if (n === 0) {
-      nav[n].addEventListener("click", function() {
-        if (navSwitch !== "works") {
-          if (navSwitch === "contact") {
-            opacityFilter.classList.remove('fadeFilter');
-            contactPage.classList.remove('fade');
-            slider.parentElement.classList.remove('hidden');
-            setTimeout(() => {
-              opacityFilter.classList.add('hidden');
-              contactPage.classList.add('hidden');
-              slider.parentElement.classList.remove('fadeout');
-            }, 10);
-          }
-          navSwitch = "works";
-          slider.classList.add('moveRight');
-            setTimeout(() => {
-              clearSlider();
-              fillSlider(worksData);
-              fillDisplay();
-            }, 500);     
-            setTimeout(() => {
-              slider.classList.remove('moveRight');
-            }, 500);           
-    console.log(navSwitch)
-  };
-      });
-    } else if (n === 1) {
-      nav[n].addEventListener("click", function() {
-        if (navSwitch !== "archives") {
-          if (navSwitch === "contact") {
-            opacityFilter.classList.remove('fadeFilter');
-            contactPage.classList.remove('fade');
-            slider.parentElement.classList.remove('hidden');
-            setTimeout(() => {
-              opacityFilter.classList.add('hidden');
-              contactPage.classList.add('hidden');
-              slider.parentElement.classList.remove('fadeout');
-            }, 10);
-          }
-          navSwitch = "archives";
-          slider.classList.add('moveRight');
-            setTimeout(() => {
-              clearSlider();
-              fillSlider(archivesData);
-              fillDisplay();
-            }, 500);     
-            setTimeout(() => {
-              slider.classList.remove('moveRight');
-            }, 500);       
-    console.log(navSwitch)
-  };
-      });
-    }
-     else if (n === 2) {
-      nav[n].addEventListener("click", function() {
-      if (navSwitch !== "others") {
-        if (navSwitch === "contact") {
-          opacityFilter.classList.remove('fadeFilter');
-          contactPage.classList.remove('fade');
-          slider.parentElement.classList.remove('hidden');
-          setTimeout(() => {
-            opacityFilter.classList.add('hidden');
-            contactPage.classList.add('hidden');
-            slider.parentElement.classList.remove('fadeout');
-          }, 10);
+    if (newWidth > 1024) {
+        for (let n = 0; n < entries.length; n++) {
+            if (entries[n].classList.contains('hidden'))
+            entries[n].classList.remove('hidden');
         }
-        navSwitch = "others";
-        slider.classList.add('moveRight');
-          setTimeout(() => {
-            clearSlider();
-            fillSlider(othersData);
-            fillDisplay();
-          }, 500);     
-          setTimeout(() => {
-            slider.classList.remove('moveRight');
-          }, 500);
-};
+    } else if (newWidth < 1024) {
+        
+        if (wrapperMenu.classList.contains('open'))
+            wrapperMenu.classList.remove('open')
+        for (let n = 0; n < entries.length; n++) {
+            if(!hr[n].classList.contains('hidden') ) {
+                entries[n].classList.add('hidden');
+            }
+            if (entries[n].innerHTML !== lastEntry.innerHTML)
+                entries[n].classList.add('hidden');
+        }
+    }
+});
+
+wrapper.addEventListener('click', () => {
+    header.classList.add('main-header');
+    logo.classList.add('main-logo');
+    frontDesk.classList.add('hidden');
+    headerMenu.classList.remove('hidden');
+    main.classList.remove('hidden');
+});
+
+
+const entries = document.querySelectorAll('.entry')
+const entriesContent = document.querySelectorAll('.entry-content')
+//  putting 'click' listener on all entries in the nav
+for (let n = 0; n < entries.length; n++) {  
+    const entry = entries[n];
+    const entryContent = entriesContent[n];
+
+    entry.addEventListener("click", function(e) {
+
+        for (let n2 = 0; n2 < entriesContent.length; n2++) {
+            //  checking if an entry content is already opened
+            if (entryContent != entriesContent[n2] && !entriesContent[n2].classList.contains('hidden')) {
+                entriesContent[n2].classList.add('hidden');
+                entriesContent[n].classList.remove('hidden');
+            }
+        }
+
+        // for responsive menu
+        if (wrapperMenu.classList.contains('open') && e.target.innerHTML === entry.innerHTML) {
+            wrapMenu(entries, e.target);
+            
+        }
     });
-  }
-      else if (n === 3){
-        nav[n].addEventListener("click", function() {
-          if (navSwitch !== "contact") {
-            navSwitch = "contact"
-            opacityFilter.classList.remove('hidden');
-            contactPage.classList.remove('hidden');
-            slider.parentElement.classList.add('fadeout');
-            setTimeout(() => {
-              opacityFilter.classList.add('fadeFilter');
-              contactPage.classList.remove('fade');
-              slider.parentElement.classList.add('hidden');
-            }, 10);
-    console.log(navSwitch)
-  };
-      });
-  }
 
 }
 
-// -- displayfiller --
-const credentialsContent = credentials.querySelectorAll('p');
-console.log(credentialsContent)
-function fillDisplay() {
-  const sliderEntries = slider.querySelectorAll('.slider-entry'); 
-  sliderEntries.forEach(entry => {
-    //video launcher
-    entry.addEventListener('click', function () {
-      displayImage.classList.add('hidden');
-      opacityFilter.classList.remove('hidden');
-      credentials.classList.remove('hidden');
-      setTimeout(() => {
-        opacityFilter.classList.add('fadeFilter');
-        // displayVideo.classList.add('fade');
-        credentials.classList.add('fade');
-        displayVideo.classList.remove('hidden');
-      }, 10);
+wrapperMenu.addEventListener('click', () => {
+    wrapMenu(entries);
+});
 
+let lastEntry = entries[0];
+function wrapMenu(entries, entryTarget) {
+    entryTarget = (typeof entryTarget === 'undefined') ? '' : entryTarget;
+    if (entryTarget !== '')
+        lastEntry = entryTarget;
+    // console.log(entryTarget)
+    if (wrapperMenu.classList.contains('open')) { 
+        for (let n = 0; n < entries.length; n++) {
+            hr[n].classList.toggle('hidden');
+            if (entries[n].innerHTML !== entryTarget.innerHTML && entries[n].innerHTML !== lastEntry.innerHTML)
+                entries[n].classList.toggle('hidden');
+        }
+    } else {
 
-      if (navSwitch === "works") {
-        displayVideo.setAttribute('src', `flv/${worksData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute('film')}`);
-        displayVideo.autoplay = true;
-        credentialsContent.forEach(element => {
-          element.innerHTML =`${element.className}: ${worksData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute(element.className)}`;
-        });
-      }
-      else if (navSwitch === "archives") {
-        console.log(entry)
-  
-        displayVideo.setAttribute('src', `flv/${archivesData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute('film')}`);
-        credentialsContent.forEach(element => {
-          element.innerHTML = `${element.className}: ${archivesData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute(element.className)}`;
-        });
-      }
-      else if (navSwitch === "others") {
-        console.log(entry)
-  
-        displayVideo.setAttribute('src', `flv/${othersData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute('film')}`);
-        credentialsContent.forEach(element => {
-          element.innerHTML = `${element.className}: ${othersData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute(element.className)}`;
-        });
-      }
-      displayVideo.autoplay = true;
-      displayVideo.load(); 
-    });
-
-    //image preview
-    entry.addEventListener('mouseover', function () {
-      if (navSwitch === "works") {
-        displayImage.classList.remove('hidden');
-        displayImage.setAttribute('src', `images/${worksData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute('preview')}`);
-      }
-      else if (navSwitch === "archives") {
-        displayImage.classList.remove('hidden');
-        displayImage.setAttribute('src', `images/${archivesData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute('preview')}`);
-      } 
-      else if (navSwitch === "others") {
-        displayImage.classList.remove('hidden');
-        displayImage.setAttribute('src', `images/${othersData.querySelector(`item[name="${entry.innerHTML}"]`).getAttribute('preview')}`);
-      }
-    });
-    entry.addEventListener('mouseout', function () {
-        displayImage.classList.add('hidden');
-        displayImage.setAttribute('src', ``);
-    });
-  });
+        for (let n = 0; n < entries.length; n++) {
+            hr[n].classList.toggle('hidden');
+            if (entries[n].classList.contains('hidden'))
+                entries[n].classList.toggle('hidden');
+            }
+    }
+    wrapperMenu.classList.toggle('open');
 }
-
-// -- Slider - up and down button behavior --
-upButton.addEventListener('click', function () {
-  const sliderEntries = slider.querySelectorAll('.slider-entry');
-  if (sliderEntries[0].classList.contains('hidden')) {
-    let prevEntry = 0; //must be not hidden
-    sliderEntries
-    for (let n = 0; sliderEntries[n].classList.contains('hidden'); n++) {
-      const entry = sliderEntries[n];
-      if (entry.classList.contains('hidden')) {
-        prevEntry = n;
-      }
-    }
-    // sliderEntries[prevEntry].classList.remove('hidden');
-    // sliderEntries[prevEntry + 9].classList.add('hidden');
-
-
-    sliderEntries[prevEntry + 9].classList.add('upSlide');
-    setTimeout(() => {
-      sliderEntries[prevEntry + 9].classList.add('hidden');
-      sliderEntries[prevEntry].classList.remove('hidden');
-      sliderEntries[prevEntry].classList.add('downSlide');
-    }, 200);
-
-    setTimeout(() => {
-      sliderEntries[prevEntry + 9].classList.remove('upSlide');
-      sliderEntries[prevEntry].classList.remove('downSlide');
-    }, 300);
-    if (prevEntry + 9 === 9)
-      upButton.classList.add('unactive');
-    else
-      downButton.classList.remove('unactive');
-  }
-});
-downButton.addEventListener('click', function () {
-  const sliderEntries = slider.querySelectorAll('.slider-entry');
-  if (sliderEntries[sliderEntries.length - 1].classList.contains('hidden')) {
-    let prevEntry = 0; //must be not hidden
-    for (let n = 0; !sliderEntries[n + 8].classList.contains('hidden'); n++) {
-      const entry = sliderEntries[n];
-      if (!entry.classList.contains('hidden') && sliderEntries[0].classList.contains('hidden') ) {
-        prevEntry = n;
-      }
-    }
-    console.log(prevEntry)
-    sliderEntries[prevEntry].classList.add('downSlide');
-    setTimeout(() => {
-      sliderEntries[prevEntry].classList.add('hidden');
-      sliderEntries[prevEntry + 9].classList.remove('hidden');
-      sliderEntries[prevEntry + 9].classList.add('upSlide');
-      sliderEntries[prevEntry + 9].preventDefault;
-    }, 200);
-
-    setTimeout(() => {
-      sliderEntries[prevEntry].classList.remove('downSlide');
-      sliderEntries[prevEntry + 9].classList.remove('upSlide');
-      sliderEntries[prevEntry].preventDefault;
-    }, 300);
-    
-    if (prevEntry + 9 === sliderEntries.length - 1)
-      downButton.classList.add('unactive');
-    else
-      upButton.classList.remove('unactive');
-  }    
-});
